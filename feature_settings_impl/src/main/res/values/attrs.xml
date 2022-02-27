@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="NumericStepWidget">
+        <attr name="stepNumber" format="integer" />
+        <attr name="stepText" format="string|reference" />
+    </declare-styleable>
+
+</resources>

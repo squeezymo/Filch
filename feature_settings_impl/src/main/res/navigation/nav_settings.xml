@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_settings"
+    app:startDestination="@id/settingsRootFragment">
+
+    <dialog
+        android:id="@+id/settingsRootFragment"
+        android:name="me.squeezymo.settings.impl.ui.SettingsRootFragment"
+        android:label="SettingsRootFragment">
+
+        <deepLink
+            app:uri="filch-a0eb0.firebaseapp.com://settings" />
+
+    </dialog>
+
+    <dialog
+        android:id="@+id/logoutServicePickerFragment"
+        android:name="me.squeezymo.settings.impl.ui.LogoutServicePickerFragment"
+        android:label="LogoutServicePickerFragment">
+
+        <deepLink app:uri="filch-a0eb0.firebaseapp.com://logout" />
+
+    </dialog>
+
+</navigation>

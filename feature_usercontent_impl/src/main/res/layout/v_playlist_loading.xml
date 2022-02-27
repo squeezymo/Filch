@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="#EC3859"
+    tools:layout_height="wrap_content"
+    tools:layout_width="wrap_content"
+    tools:divider="@drawable/space_h_8"
+    tools:showDividers="middle"
+    tools:orientation="vertical"
+    tools:parentTag="android.widget.LinearLayout"
+    tools:theme="@style/Theme.Filch">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:background="@drawable/bg_frame_r8_s_white_a50" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/migration_status_retrieving_pi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            app:indicatorColor="@color/white_a50"
+            app:indicatorSize="16dp"
+            app:trackThickness="1dp" />
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_tv"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="12sp"
+        tools:text="Very long playlist title" />
+
+</merge>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_streaming_services_graph"
+    app:startDestination="@id/streamingServicesFragment">
+
+    <fragment
+        android:id="@+id/streamingServicesFragment"
+        android:name="me.squeezymo.streamingservices.impl.ui.StreamingServicesFragment"
+        android:label="StreamingServicesFragment">
+
+        <deepLink app:uri="filch-a0eb0.firebaseapp.com://streaming_services" />
+
+    </fragment>
+
+    <dialog
+        android:id="@+id/connectToServiceFragment"
+        android:name="me.squeezymo.streamingservices.impl.ui.ConnectToServiceFragment"
+        android:label="ConnectToServiceFragment">
+
+        <argument
+            android:name="to"
+            app:argType="string" />
+
+        <argument
+            android:name="accessToken"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <deepLink app:uri="filch-a0eb0.firebaseapp.com://connect?to={to}&amp;access_token={accessToken}" />
+
+    </dialog>
+
+    <dialog
+        android:id="@+id/streamingServicePickerFragment"
+        android:name="me.squeezymo.streamingservices.impl.ui.StreamingServicePickerFragment"
+        android:label="StreamingServicePickerFragment">
+
+        <argument
+            android:name="targetService"
+            app:argType="string" />
+
+        <deepLink app:uri="filch-a0eb0.firebaseapp.com://streaming_service_picker?target_service={targetService}" />
+
+    </dialog>
+
+</navigation>

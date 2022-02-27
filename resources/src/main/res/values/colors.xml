@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="white_a10">#1AFFFFFF</color>
+    <color name="white_a12">#1FFFFFFF</color>
+    <color name="white_a20">#33FFFFFF</color>
+    <color name="white_a40">#66FFFFFF</color>
+    <color name="white_a50">#80FFFFFF</color>
+    <color name="white_a60">#99FFFFFF</color>
+    <color name="white_a70">#B3FFFFFF</color>
+    <color name="white_a80">#CCFFFFFF</color>
+
+    <color name="black_a10">#1A000000</color>
+    <color name="black_a12">#1F000000</color>
+    <color name="black_a20">#33000000</color>
+    <color name="black_a40">#66000000</color>
+    <color name="black_a50">#80000000</color>
+    <color name="black_a60">#99000000</color>
+    <color name="black_a70">#B3000000</color>
+    <color name="black_a80">#CC000000</color>
+
+    <color name="bg_primary">#000000</color>
+    <color name="bg_secondary">#1E1E1E</color>
+    <color name="bg_outgoing_message">#3E3E3E</color>
+    <color name="bg_incoming_message">#292929</color>
+    <color name="bg_technical_message">#292929</color>
+    <color name="bg_new_message">#292929</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#99FFFFFF</color>
+    <color name="warning">#DA3655</color>
+
+    <color name="dialog_divider">#A6545458</color>
+
+    <color name="spotify_main">#37D146</color>
+    <color name="spotify_dim">@color/black_a80</color>
+    <color name="deezer_main">#EF5466</color>
+    <color name="deezer_dim">@color/black_a80</color>
+    <color name="youtube_music_main">#C4302B</color>
+    <color name="youtube_music_dim">@color/black_a80</color>
+
+    <color name="cb_bg_checked">#5191FA</color>
+    <color name="cb_bg_unchecked">#33FFFFFF</color>
+    <color name="cb_stroke_checked">#5191FA</color>
+    <color name="cb_stroke_unchecked">#FFFFFF</color>
+    <color name="cb_tick">#FFFFFF</color>
+
+    <color name="service_icon_authenticated">#FFFFFF</color>
+    <color name="service_icon_unauthenticated">#49494c</color>
+    <color name="service_gradient_src">#27477A</color>
+    <color name="service_gradient_dst">#19191B</color>
+
+</resources>

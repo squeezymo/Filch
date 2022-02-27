@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="FilchBottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/FilchBottomSheet</item>
+
+    </style>
+
+    <style name="FilchBottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+
+    </style>
+
+</resources>

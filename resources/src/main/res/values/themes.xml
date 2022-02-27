@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.Filch" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="colorAccent">@color/white</item>
+
+        <item name="android:statusBarColor">@color/bg_primary</item>
+        <item name="android:navigationBarColor">@color/bg_primary</item>
+        <item name="android:windowBackground">@color/bg_primary</item>
+        <item name="android:textViewStyle">@style/FilchTextView</item>
+        <!-- doesn't work, textInputStyle with overlays must be used instead -->
+        <!-- <item name="android:editTextStyle">@style/FilchEditText</item> -->
+        <item name="textInputStyle">@style/FilchTextInputLayoutStyle</item>
+        <item name="android:checkboxStyle">@style/FilchCheckbox</item>
+        <item name="checkboxStyle">@style/FilchCheckbox</item>
+
+    </style>
+
+</resources>

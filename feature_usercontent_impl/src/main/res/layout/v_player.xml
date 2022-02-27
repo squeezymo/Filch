@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@color/black_a80"
+    tools:divider="@drawable/space_w_20"
+    tools:gravity="center_vertical"
+    tools:layout_height="50dp"
+    tools:layout_width="match_parent"
+    tools:orientation="horizontal"
+    tools:parentTag="android.widget.FrameLayout"
+    tools:showDividers="middle"
+    tools:theme="@style/Theme.Filch">
+
+    <LinearLayout
+        android:divider="@drawable/space_w_20"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:paddingHorizontal="16dp"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/track_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                tools:text="Venom" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/artist_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white_a60"
+                android:textSize="12sp"
+                tools:text="Artist name" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/toggle_play_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?android:attr/actionBarItemBackground"
+            android:contentDescription="@string/user_content.descr.play"
+            tools:src="@drawable/ic_play" />
+
+        <ImageView
+            android:id="@+id/next_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?android:attr/actionBarItemBackground"
+            android:contentDescription="@string/user_content.descr.play"
+            android:src="@drawable/ic_next" />
+
+        <ImageView
+            android:id="@+id/migration_complete_iv"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:contentDescription="@string/user_content.descr.already_migrated"
+            android:visibility="gone"
+            tools:src="@drawable/ic_musical_note"
+            tools:visibility="visible" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/migration_progress_pi"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:indicatorColor="@color/white"
+            app:indicatorSize="16dp"
+            app:trackThickness="1dp"
+            tools:visibility="visible" />
+
+        <CheckBox
+            android:id="@+id/migrate_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-4dp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/track_sb"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:indeterminate="false"
+        android:padding="0dp"
+        android:layout_gravity="bottom"
+        android:thumb="@color/white"
+        android:progressDrawable="@drawable/sb_progress"
+        tools:progress="40" />
+
+</merge>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="#EC3859"
+    tools:layout_height="121dp"
+    tools:layout_width="match_parent"
+    tools:parentTag="android.widget.FrameLayout"
+    tools:theme="@style/Theme.Filch">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/playlists_rcv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="3"
+        tools:listitem="@layout/v_playlist_loading" />
+
+</merge>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Consider moving strings to their respective feature modules -->
+
+    <string name="vk">ВКонтакте</string>
+    <string name="migrate_to_vk">Стащить в ВКонтакте</string>
+    <string name="apple_music">Apple Music</string>
+    <string name="migrate_to_apple_music">Стащить в Apple Music</string>
+    <string name="yandex_music">Яндекс.Музыка</string>
+    <string name="migrate_to_yandex_music">Стащить в Яндекс.Музыку</string>
+    <string name="spotify">Spotify</string>
+    <string name="migrate_to_spotify">Стащить в Spotify</string>
+    <string name="deezer">Deezer</string>
+    <string name="migrate_to_deezer">Стащить в Deezer</string>
+    <string name="youtube_music">YouTube Music</string>
+    <string name="migrate_to_youtube_music">Стащить в YouTube Music</string>
+
+    <string name="general.action.close">Закрыть</string>
+    <string name="general.action.back">Назад</string>
+
+    <string name="streaming_services.hint.pick_src_service">
+        <![CDATA[Выбери <b>куда</b> стащить]]>
+    </string>
+    <string name="streaming_services.hint.use_dragging">
+        <![CDATA[Используй <b>перетаскивание</b>, чтобы начать поиск]]>
+    </string>
+    <string name="streaming_services.hint.release_to_migrate">
+        <![CDATA[Отпусти, чтобы стащить из <b>%1$s</b> в <b>%2$s</b>]]>
+    </string>
+    <string name="streaming_services.hint.auth_to_migrate">
+        <![CDATA[Авторизуйся в <b>%1$s</b>, чтобы стащить туда музыку]]>
+    </string>
+    <string name="streaming_services.service.coming_soon">Скоро\nдобавим</string>
+    <string name="streaming_services.action.go_to_settings">помощь и настройки</string>
+
+    <string name="settings.caption.about">О приложении</string>
+    <string name="settings.text.about">
+        <![CDATA[<b>Стащи</b> помогает переехать с одного сервиса на другой и взять с собой всю коллекцию песен]]>
+    </string>
+    <string name="settings.action.share">Рассказать друзьям</string>
+    <string name="settings.action.logout">Выйти</string>
+    <string name="settings.action.go_to_client_support">Сообщить об ошибке</string>
+    <string name="settings.action.go_to_privacy_policy">Политика конфиденциальности</string>
+    <string name="settings.caption.how_it_works">Как это работает?</string>
+    <string name="settings.text.how_it_works_1">вы выбираете куда тащить</string>
+    <string name="settings.text.how_it_works_2">идёт процесс поиска доступных песен и создаётся список</string>
+    <string name="settings.text.how_it_works_3">добавляете песни из списка по одной или всё сразу</string>
+    <string name="settings.text.how_it_works_4">идёт процесс добавления</string>
+    <string name="settings.caption.logout">Откуда выйти?</string>
+    <string name="settings.caption.no_services_to_logout_from">Вы пока не авторизованы ни в одном сервисе</string>
+    <string name="settings.caption.logout_success">Вы больше не авторизованы в %1$s</string>
+    <string name="settings.caption.logout_failure">Не удалось выйти из %1$s. Попробуйте повторить попытку позже</string>
+
+    <string name="user_support.caption.help">Помощь</string>
+    <string name="user_support.hint.new_message">Сообщение</string>
+    <string name="user_support.technical_message.header">Опишите проблему как можно подробнее. Мы ответим в течение дня.</string>
+
+    <string name="connect_to_service.action.connect">Подключить</string>
+    <string name="connect_to_service.caption.where_from">Откуда?</string>
+    <string name="connect_to_service.description.not_connected">
+        Подключи, чтобы мы могли начать поиск по твоему плейлисту
+    </string>
+    <string name="connect_to_service.description.connected">
+        Тут появятся песни, которые ты хочешь перенести из другого сервиса
+    </string>
+
+    <string name="streaming_service_picker.migrate.header">Добавить все песни сразу или выбирать вручную?</string>
+    <string name="streaming_service_picker.migrate.option_all">Добавить все</string>
+    <string name="streaming_service_picker.migrate.option_selected">Вручную</string>
+    <string name="streaming_service_picker.migrate.option_cancel">Отмена</string>
+
+    <string name="user_content.header.migrated_counter">
+        <![CDATA[<b>%1$s</b> из %2$s]]>
+    </string>
+    <string name="user_content.header.enable_selection">Выбрать</string>
+    <string name="user_content.header.cancel_selection">Отмена</string>
+    <string name="user_content.descr.preview_track">Превью</string>
+    <string name="user_content.descr.already_migrated">Уже в библиотеке</string>
+    <plurals name="user_content.tracks_quantity">
+        <item quantity="one">%1$s песню</item>
+        <item quantity="few">%1$s песни</item>
+        <item quantity="many">%1$s песен</item>
+        <item quantity="other">%1$s песен</item>
+    </plurals>
+    <plurals name="user_content.playlists_quantity">
+        <item quantity="one">%1$s плейлист</item>
+        <item quantity="few">%1$s плейлиста</item>
+        <item quantity="many">%1$s плейлистов</item>
+        <item quantity="other">%1$s плейлистов</item>
+    </plurals>
+    <string name="user_content.action.migrate_one_entity">Добавить %1$s\nв %2$s</string>
+    <string name="user_content.action.migrate_two_entities">Добавить %1$s и %2$s\nв %3$s</string>
+    <string name="user_content.descr.play">Проиграть</string>
+    <string name="user_content.err.tracks_not_retrieved">Произошла ошибка при получении аудиотеки</string>
+    <string name="user_content.err.tracks_not_retrieved.option_retry">Повторить попытку</string>
+    <string name="user_content.err.tracks_not_retrieved.option_back">Вернуться к списку сервисов</string>
+
+</resources>

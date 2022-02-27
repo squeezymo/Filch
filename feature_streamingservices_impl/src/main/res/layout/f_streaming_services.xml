@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="@color/bg_primary"
+    tools:theme="@style/Theme.Filch">
+
+    <me.squeezymo.streamingservices.impl.ui.widget.StreamingServicePicker
+        android:id="@+id/streaming_service_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="62dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/go_to_settings_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="36dp"
+        android:textSize="14sp"
+        android:padding="16dp"
+        android:text="@string/streaming_services.action.go_to_settings"
+        android:textColor="#6E94D4" />
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@drawable/bg_streaming_service_picker"
+    tools:gravity="center_horizontal"
+    tools:layout_height="@dimen/service_picker_height"
+    tools:layout_width="match_parent"
+    tools:orientation="vertical"
+    tools:padding="20dp"
+    tools:parentTag="android.widget.LinearLayout"
+    tools:theme="@style/Theme.Filch">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/services_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="20dp"
+        app:dividerDrawableHorizontal="@drawable/space_h_16"
+        app:dividerDrawableVertical="@drawable/space_w_8"
+        app:flexWrap="wrap"
+        app:justifyContent="center"
+        app:showDividerHorizontal="middle"
+        app:showDividerVertical="middle" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/hint_tv"
+        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="16dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/text_secondary"
+        tools:text="@string/streaming_services.hint.use_dragging" />
+
+</merge>

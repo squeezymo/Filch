@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="#EC3859"
+    tools:layout_height="wrap_content"
+    tools:layout_width="match_parent"
+    tools:orientation="vertical"
+    tools:parentTag="android.widget.LinearLayout"
+    tools:theme="@style/Theme.Filch">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/space_w_12"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:showDividers="middle">
+
+        <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp">
+
+            <me.squeezymo.usercontent.impl.ui.widget.TrackThumbnailWidget
+                android:id="@+id/thumbnail_widget"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/migration_status_retrieving_pi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                app:indicatorColor="@color/white_a50"
+                app:indicatorSize="16dp"
+                app:trackThickness="1dp" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:divider="@drawable/space_h_4"
+            android:minHeight="48dp"
+            android:orientation="vertical"
+            android:paddingTop="2dp"
+            android:showDividers="middle">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                tools:text="Venom" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/artist_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white_a60"
+                android:textSize="12sp"
+                tools:text="Eminem" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/space_h_4"
+            android:gravity="end"
+            android:orientation="vertical"
+            android:paddingTop="2dp"
+            android:showDividers="middle">
+
+            <View
+                android:id="@+id/empty_placeholder"
+                android:layout_width="16dp"
+                android:layout_height="19dp"
+                android:layout_marginTop="4dp"
+                tools:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/migration_complete_iv"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="3dp"
+                android:contentDescription="@string/user_content.descr.already_migrated"
+                tools:src="@drawable/ic_musical_note"
+                tools:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/migrate_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:visibility="visible" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/migration_progress_pi"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="3dp"
+                android:indeterminate="true"
+                app:indicatorColor="@color/white_a50"
+                app:indicatorSize="16dp"
+                app:trackThickness="1dp"
+                tools:visibility="gone" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/duration_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white_a60"
+                android:textSize="12sp"
+                tools:text="14:29" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/track_sb"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="78dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="12dp"
+        android:indeterminate="false"
+        android:padding="0dp"
+        android:progressDrawable="@drawable/sb_progress_rounded"
+        android:thumb="@color/white"
+        android:visibility="gone"
+        tools:progress="40"
+        tools:visibility="visible" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="78dp"
+        android:background="@color/white_a20" />
+
+</merge>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@color/bg_primary"
+    tools:divider="@drawable/space_h_6"
+    tools:gravity="center_horizontal"
+    tools:layout_height="wrap_content"
+    tools:layout_width="@dimen/service_widget_width"
+    tools:orientation="vertical"
+    tools:parentTag="android.widget.LinearLayout"
+    tools:showDividers="middle"
+    tools:theme="@style/Theme.Filch">
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="@dimen/service_icon_width"
+        android:layout_height="@dimen/service_icon_height"
+        android:layout_gravity="center"
+        tools:background="@drawable/bg_streaming_service_authenticated">
+
+        <ImageView
+            android:id="@+id/service_logo_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:padding="12dp"
+            tools:src="@drawable/logo_deezer" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/coming_soon_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:textColor="@color/service_icon_unauthenticated"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            android:text="@string/streaming_services.service.coming_soon" />
+
+    </FrameLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/caption_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        tools:text="Deezer" />
+
+</merge>

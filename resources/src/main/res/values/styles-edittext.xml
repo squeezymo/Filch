@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- See https://stackoverflow.com/a/60178370/1815052 -->
+
+    <style name="FilchTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="materialThemeOverlay">@style/FilchMaterialThemeOverlay</item>
+    </style>
+
+    <style name="FilchMaterialThemeOverlay">
+        <item name="editTextStyle">@style/FilchEditText</item>
+    </style>
+
+    <style name="FilchEditText" parent="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white_a50</item>
+    </style>
+
+</resources>

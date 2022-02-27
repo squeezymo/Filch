@@ -1,0 +1,99 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'com.google.firebase.crashlytics'
+    id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+def apikeyPropertiesFile = rootProject.file("apikey.properties")
+def apikeyProperties = new Properties()
+apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
+
+android {
+    compileSdk rootProject.compileSdk
+
+    defaultConfig {
+        applicationId "com.filch.musicmigrator"
+        minSdk rootProject.minSdkVersion
+        targetSdk rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [
+                'oauthServiceGoogleRedirectUriScheme': apikeyProperties['oauth.service.google.redirect_uri.scheme'],
+        ]
+
+        ndk {
+            // Filter for architectures supported by Flutter.
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86_64'
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    buildTypes {
+        profile {
+            initWith debug
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+        freeCompilerArgs += "-opt-in=kotlin.contracts.ExperimentalContracts"
+    }
+}
+
+dependencies {
+    implementation project(':resources')
+    implementation project(':core')
+    implementation project(':core_oauth2')
+    implementation project(':feature_cache_impl')
+    implementation project(':feature_streamingservices_impl')
+    implementation project(':feature_usercontent_impl')
+    implementation project(':feature_usersupport_impl')
+    implementation project(':feature_settings_impl')
+    implementation project(':feature_analytics_impl')
+    implementation project(':feature_migrator_impl_deezer')
+    implementation project(':feature_migrator_impl_spotify')
+    implementation project(':feature_migrator_impl_youtube')
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+
+    // Multidex
+    implementation "androidx.multidex:multidex:2.0.1"
+
+    // Fragment KTX
+    implementation "androidx.fragment:fragment-ktx:$fragment_ktx_version"
+
+    // Dagger/Hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+    debugImplementation 'me.squeezymo.components:flutter_debug:1.0'
+    profileImplementation 'me.squeezymo.components:flutter_profile:1.0'
+    releaseImplementation 'me.squeezymo.components:flutter_release:1.0'
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}

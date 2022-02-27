@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="@color/spotify_main">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tracks_counter_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white_a40"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            tools:text="35 из 118" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/select_tracks_btn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0"
+            android:paddingHorizontal="0dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            tools:text="@string/user_content.header.enable_selection" />
+
+        <ImageButton
+            android:id="@+id/toggle_show_migrated_tracks_btn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/bg_frame_r8_s_white_a20"
+            tools:src="@drawable/logo_spotify" />
+
+    </LinearLayout>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/migration_progress_pi"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:indeterminate="false"
+        app:indicatorColor="@color/white"
+        app:trackColor="@color/white_a40"
+        app:trackCornerRadius="4dp"
+        tools:progress="40" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_to_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/content_rcv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingTop="12dp"
+                android:nestedScrollingEnabled="false"
+                android:paddingBottom="16dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="3"
+                tools:listitem="@layout/v_track_loading" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <me.squeezymo.usercontent.impl.ui.widget.PlayerWidget
+            android:id="@+id/player_widget"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/player_height"
+            android:gravity="top"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/migrate_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="24dp"
+            android:letterSpacing="0"
+            android:minHeight="72dp"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:backgroundTint="@color/black_a80"
+            app:cornerRadius="30dp"
+            tools:text="Добавить 900 песен\nв Apple Music" />
+
+    </FrameLayout>
+
+</LinearLayout>

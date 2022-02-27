@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="#EC3859"
+    tools:layout_height="wrap_content"
+    tools:layout_width="wrap_content"
+    tools:divider="@drawable/space_h_8"
+    tools:showDividers="middle"
+    tools:orientation="vertical"
+    tools:parentTag="android.widget.LinearLayout"
+    tools:theme="@style/Theme.Filch">
+
+    <FrameLayout
+        android:layout_width="78dp"
+        android:layout_height="78dp">
+
+        <ImageView
+            android:id="@+id/thumbnail_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_frame_r8_s_white_a50" />
+
+        <ImageView
+            android:id="@+id/migration_complete_iv"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/user_content.descr.already_migrated"
+            android:visibility="gone"
+            android:layout_gravity="top|end"
+            tools:src="@drawable/ic_musical_note"
+            tools:visibility="visible" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/migration_progress_pi"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_margin="4dp"
+            android:indeterminate="true"
+            android:visibility="gone"
+            android:layout_gravity="top|end"
+            app:indicatorColor="@color/white"
+            app:indicatorSize="16dp"
+            app:trackThickness="1dp"
+            tools:visibility="visible" />
+
+        <CheckBox
+            android:id="@+id/migrate_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_gravity="top|end"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </FrameLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_tv"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="12sp"
+        tools:text="Very long playlist title" />
+
+</merge>

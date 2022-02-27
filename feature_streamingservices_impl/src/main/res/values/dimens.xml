@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="service_picker_height">378dp</dimen>
+
+    <dimen name="player_height">72dp</dimen>
+</resources>

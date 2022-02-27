@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:layout_height="48dp"
+    tools:layout_width="48dp"
+    tools:parentTag="android.widget.FrameLayout"
+    tools:theme="@style/Theme.Filch">
+
+    <ImageView
+        android:id="@+id/thumbnail_iv"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@null" />
+
+    <View
+        android:id="@+id/dim_view"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@color/black_a60"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/preview_iv"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_play"
+        android:contentDescription="@string/user_content.descr.preview_track" />
+
+</merge>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "+",
+    "firebase_url": "https://filch-a0eb0.firebaseio.com",
+    "project_id": "filch-a0eb0",
+    "storage_bucket": "filch-a0eb0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:408828253186:android:3b1b2b590777c50c1ac31b",
+        "android_client_info": {
+          "package_name": "com.filch.musicmigrator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "408828253186-8p9vk4bn5koa8i9n3d0oi8ut536hnng9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.filch.musicmigrator",
+            "certificate_hash": "1d1a507bacfae8ab1314eb48b232fef065dd8a47"
+          }
+        },
+        {
+          "client_id": "408828253186-bu1m1gn9hilmivn3ggarq5a6mos59faf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvE1hNs7a_HlyATKvycxINhxpfdkEClkk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "408828253186-bu1m1gn9hilmivn3ggarq5a6mos59faf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "408828253186-3hkpiu0a8k9fmhn0uqe7v4h6orbb1it0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "Voidilov.MusicImport"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

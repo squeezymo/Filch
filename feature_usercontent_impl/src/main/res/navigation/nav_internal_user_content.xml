@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_user_content_graph"
+    app:startDestination="@id/userContentFragment">
+
+    <fragment
+        android:id="@+id/userContentFragment"
+        android:name="me.squeezymo.usercontent.impl.ui.UserContentFragment"
+        android:label="UserContentFragment">
+
+        <argument
+            android:name="from"
+            app:argType="string" />
+
+        <argument
+            android:name="to"
+            app:argType="string" />
+
+        <argument
+            android:name="autoMigrate"
+            app:argType="boolean" />
+
+        <action
+            android:id="@+id/action_userContent_to_playlist"
+            app:destination="@id/playlistFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/playlistFragment"
+        android:name="me.squeezymo.usercontent.impl.ui.PlaylistFragment"
+        android:label="PlaylistFragment">
+
+        <argument
+            android:name="from"
+            app:argType="string" />
+
+        <argument
+            android:name="to"
+            app:argType="string" />
+
+        <argument
+            android:name="title"
+            app:argType="string" />
+
+    </fragment>
+
+</navigation>

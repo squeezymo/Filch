@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="service_icon_width">72dp</dimen>
+    <dimen name="service_icon_height">72dp</dimen>
+
+    <dimen name="service_widget_width">90dp</dimen>
+</resources>

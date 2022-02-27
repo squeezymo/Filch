@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="@drawable/bs_bg_spotify"
+    tools:theme="@style/Theme.Filch">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6dp"
+        android:contentDescription="@null"
+        android:src="@drawable/bs_indicator" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:divider="@drawable/space_w_8"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/service_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:text="Spotify" />
+
+        <ImageButton
+            android:id="@+id/service_logo_iv"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/bg_frame_r8_s_white_a20"
+            android:contentDescription="@null"
+            tools:src="@drawable/logo_spotify" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/description_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="24dp"
+        android:textColor="@color/white_a80"
+        android:textSize="18sp"
+        tools:text="@string/connect_to_service.description.not_connected" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/connect_btn"
+        style="@style/FilchButtonShadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="24dp"
+        tools:text="Подключить" />
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@color/bg_secondary"
+    tools:divider="@drawable/space_w_4"
+    tools:orientation="horizontal"
+    tools:paddingHorizontal="8dp"
+    tools:paddingVertical="6dp"
+    tools:parentTag="android.widget.LinearLayout"
+    tools:showDividers="middle"
+    tools:theme="@style/Theme.Filch">
+
+    <EditText
+        android:id="@+id/input_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/bg_new_message"
+        android:hint="@string/user_support.hint.new_message"
+        android:importantForAutofill="no"
+        android:inputType="text|textAutoComplete|textMultiLine|textAutoCorrect|textCapSentences"
+        android:minHeight="32dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="4dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white_a50" />
+
+    <FrameLayout
+        android:id="@+id/submit_container"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/actionBarItemBackground">
+
+        <ImageView
+            android:id="@+id/submit_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_new_message"
+            android:padding="8dp"
+            android:src="@drawable/ic_arrow_up" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/submission_in_progress_pi"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:indicatorColor="@color/white"
+            app:indicatorSize="16dp"
+            app:trackThickness="1dp"
+            tools:visibility="visible" />
+
+    </FrameLayout>
+
+</merge>
